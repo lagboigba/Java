@@ -2,9 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 public class EE41 {
 public static void main(String[] args) {
-	Scanner sc = new Scanner(System.in);
-	System.out.println("Entrer le nombre voulu");
-	int nbvoulu = sc.nextInt();
+	int nbvoulu = 2;
 	int resultat = calculNbLancer(nbvoulu);
 	
 	
@@ -24,9 +22,12 @@ public static int calculNbLancer(int nbvoulu) {
 
 		while(resultatlancer != nbvoulu)
 		{
-			resultatlancer = rand.nextInt(11)+2;
+			resultatlancer = rand.nextInt(6)+1;
+			resultatlancer += rand.nextInt(6)+1;
 			nblancer ++;
+			assert resultatlancer <= 12;
 		}
+		
 	System.out.println("Il a fallu " + nblancer + " lancers");
 
 	return nblancer;
