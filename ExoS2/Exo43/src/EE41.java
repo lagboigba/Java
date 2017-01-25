@@ -7,7 +7,11 @@ public static void main(String[] args) {
 	
 	
 }
-
+/**Calcul le nombre de lancers nécessaire pour atteindre nbvoulu à l'aide de 2 dés
+ * 
+ * @param nbvoulu Nombre voulu sur les dés
+ * @return nblancer, le nombre de lancers nécessaire pour atteindre nbvoulu
+ */
 public static int calculNbLancer(int nbvoulu) {
 	if (!(nbvoulu <= 12 && nbvoulu >=2)){
 		IllegalArgumentException e = new IllegalArgumentException();
@@ -28,7 +32,7 @@ public static int calculNbLancer(int nbvoulu) {
 			assert resultatlancer <= 12;
 		}
 		
-	System.out.println("Il a fallu " + nblancer + " lancers");
+	System.out.println("Il a fallu " + nblancer + " lancers pour avoir des yeux de serpents.");
 
 	return nblancer;
 }
